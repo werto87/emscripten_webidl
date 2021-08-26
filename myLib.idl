@@ -4,4 +4,3 @@ interface Bar {
    unsigned long doSomething();
   attribute long val;
 };
-
