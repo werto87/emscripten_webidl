@@ -20,7 +20,7 @@ run:
 - python -m http.server
   
 Open this link in your browser localhost:8000
-Look in the console there should be something like 
+Look in the console there should be something like   
 Bar(long val)42  
 42
   
