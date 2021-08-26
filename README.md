@@ -16,4 +16,11 @@ run:
 - conan install .. --profile:build=<your default profile> --profile:host=emscripten --build missing  -s build_type=Debug
 - emcmake cmake .. -DCMAKE_BUILD_TYPE=Debug
 - cmake --build .
-
+- cp ../html/some.html .
+- python -m http.server
+  
+Open this link in your browser localhost:8000
+Look in the console there should be something like 
+Bar(long val)42
+42
+  
