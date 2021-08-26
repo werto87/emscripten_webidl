@@ -1,0 +1,7 @@
+
+interface Bar {
+  void Bar(long val);
+   unsigned long doSomething();
+  attribute long val;
+};
+

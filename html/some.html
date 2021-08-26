@@ -1,0 +1,20 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <script src="myLib.wasm.js" type="text/javascript"></script>
+    <style type="text/css">
+        body {
+            background-color: #ccc;
+            text-size-adjust: none;
+        }
+    </style>
+
+    <script type="text/javascript">
+        // Main demo code
+        var bar
+        MyLib().then(function (MyLib) {
+            bar = new MyLib.Bar(42)
+            console.log(bar.val)
+        })
+    </script>
+</head>
