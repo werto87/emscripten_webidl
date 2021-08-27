@@ -14,7 +14,7 @@ run:
 - cd emscripten_webidl
 - mkdir build
 - cd build
-- conan install .. --profile:build=your_default_profile --profile:host=emscripten --build missing  -s build_type=Debug
+- conan install .. --profile:build=default --profile:host=emscripten --build missing  -s build_type=Debug
 - emcmake cmake .. -DCMAKE_BUILD_TYPE=Debug
 - cmake --build .
 - cp ../html/some.html .
