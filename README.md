@@ -1,5 +1,5 @@
 # emscripten_webidl
-Exampel for running c++ in java script. It is a reduced and renamed version of [port to emscripten of c++ bullet](https://github.com/kripken/ammo.js/tree/main).
+Exampel of running c++ in java script. It is a reduced and renamed version of [port to emscripten of c++ bullet](https://github.com/kripken/ammo.js/tree/main).
 ## Preconditions
 - [conan](https://conan.io/)
 - [cmake](https://cmake.org/)
