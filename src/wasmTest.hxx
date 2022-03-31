@@ -1,33 +1,35 @@
 #ifndef D36D6A4C_6616_4E85_9BB2_212824D9378A
 #define D36D6A4C_6616_4E85_9BB2_212824D9378A
-#define BOOST_ASIO_DISABLE_THREADS // todo find out how to run multithreaded
 #include <algorithm>
-#include <boost/asio.hpp>
-#include <boost/asio/io_context.hpp>
-#include <chrono>
-#include <cstdint>
-#include <execution>
-#include <iomanip>
+#include <cstddef>
+#include <functional>
 #include <iostream>
-#include <numeric>
-#include <stdio.h>
-#include <stdlib.h>
-#include <thread>
-#include <utility>
 #include <vector>
 
-class Bar
+struct Point
 {
-public:
-  Bar (long _val) : val (_val) { std::cout << "Bar(long val)" << val << std::endl; }
-  unsigned long
-  doSomething ()
-  {
-    boost::asio::io_context myContext{};
+  int x{};
+  int y{};
+};
 
-    return 42;
+struct SomeArray
+{
+  std::vector<Point> points{ Point{}, Point{}, Point{}, Point{} };
+  Point &
+  at (size_t index)
+  {
+    return points.at (index);
   }
-  long val{};
+  size_t
+  size ()
+  {
+    return points.size ();
+  }
+  void
+  multiplyPoints (int multiplier)
+  {
+    std::transform (points.begin (), points.end (), points.begin (), [multiplier] (Point const &point) { return Point{ .x = point.x * multiplier, .y = point.y * multiplier }; });
+  };
 };
 
 #endif /* D36D6A4C_6616_4E85_9BB2_212824D9378A */

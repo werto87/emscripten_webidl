@@ -11,10 +11,35 @@
 
     <script type="text/javascript">
         // Main demo code
-        var bar
         MyLib().then(function (MyLib) {
-            bar = new MyLib.Bar(42)
-            console.log(bar.val)
+            console.log("Pass java script array to c++ do calc and print result in java script");
+            // use c++ objects inside
+            const points = [new MyLib.Point(), new MyLib.Point(), new MyLib.Point(), new MyLib.Point()];
+            points.forEach(element => {
+                element.x = element.x
+                element.y = element.y
+            });
+            someArray = new MyLib.SomeArray()
+            for (let i = 0; i < someArray.size(); i++) {
+                someArray.at(i).x = 42
+                someArray.at(i).y = 1337
+
+            }
+            for (let i = 0; i < someArray.size(); i++) {
+                point = someArray.at(i)
+                point.x *= i
+                point.y *= i
+            }
+            for (let i = 0; i < someArray.size(); i++) {
+                console.log(someArray.at(i).x)
+                console.log(someArray.at(i).y)
+            }
+            console.log("Multiply by 10 in c++");
+            someArray.multiplyPoints(10)
+            for (let i = 0; i < someArray.size(); i++) {
+                console.log(someArray.at(i).x)
+                console.log(someArray.at(i).y)
+            }
         })
     </script>
 </head>

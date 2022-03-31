@@ -1,6 +1,14 @@
-
-interface Bar {
-  void Bar(long val);
-   unsigned long doSomething();
-  attribute long val;
+interface Point {
+  void Point();
+    attribute long x;
+    attribute long y;
 };
+
+interface SomeArray {
+    void SomeArray();
+    [Ref] Point at(long n);
+    unsigned long size();
+    void multiplyPoints (long multiplier);
+    // [BoundsChecked] attribute byte[] cell_bitmap;
+};
+
