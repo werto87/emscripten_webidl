@@ -19,7 +19,7 @@ run:
 - cmake --build .
 - cp ../html/some.html .
 - python -m http.server
-  
+ ```
 Open this link in your browser localhost:8000
 Look in the console there should be something like:   
 Pass java script array to c++ do calc and print result in java script some.html:15:21
@@ -40,4 +40,4 @@ Multiply by 10 in c++ some.html:37:21
 26740 some.html:41:25
 1260 some.html:40:25
 40110 some.html:41:25
-  
+```  
