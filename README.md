@@ -22,6 +22,22 @@ run:
   
 Open this link in your browser localhost:8000
 Look in the console there should be something like:   
-Bar(long val)42  
-42
+Pass java script array to c++ do calc and print result in java script some.html:15:21
+0 some.html:34:25
+0 some.html:35:25
+42 some.html:34:25
+1337 some.html:35:25
+84 some.html:34:25
+2674 some.html:35:25
+126 some.html:34:25
+4011 some.html:35:25
+Multiply by 10 in c++ some.html:37:21
+0 some.html:40:25
+0 some.html:41:25
+420 some.html:40:25
+13370 some.html:41:25
+840 some.html:40:25
+26740 some.html:41:25
+1260 some.html:40:25
+40110 some.html:41:25
   
